@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Cema Artes: crochê feito à mão. Bonecas, roupinhas infantis, bolsas e mantas sob encomenda, com pagamento por Pix.">
+<meta property="og:title" content="Cema Artes · Crochê feito à mão">
+<meta property="og:description" content="Bonecas, roupinhas infantis, bolsas e mantas de crochê sob encomenda.">
+<meta property="og:image" content="https://djowww.github.io/cema-artes/img/boneca-bailarina.jpg">
+<link rel="icon" href="img/logo.jpg">
+</head>
+<body style="margin:0">
+<title>Cema Artes · Crochê feito à mão</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap">
+<style>
+/* Modelo 1 "Novelo": lúdico e macio. Fundo verde-sálvia, fotos como polaroides inclinadas, botões em pílula, formas de novelo. Tema único claro, por escolha. */
+:root{--bg:#e7efe3;--paper:#fffdf8;--ink:#2f3a2e;--muted:#5d6b5b;--rose:#d9667f;--rose-d:#b84d66;--yellow:#f4d77a;--wa:#25a35a;
+--display:"Fredoka",system-ui,sans-serif;--body:"Nunito",system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+.w{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.1;text-wrap:balance}p{margin:0}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:600 1rem var(--display);padding:14px 22px;border-radius:999px;text-decoration:none;box-shadow:0 4px 0 rgba(0,0,0,.15);transition:transform .15s}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.btn svg{width:20px;height:20px}
+.wa{background:var(--wa);color:#fff}.rose{background:var(--rose);color:#fff}.light{background:var(--paper);color:var(--ink)}
+.sm{padding:10px 16px;font-size:.92rem}
+header{padding-block:18px}
+header .w{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font:700 1.4rem var(--display);color:var(--rose-d);text-decoration:none}
+.logo img{width:52px;height:52px;border-radius:50%;border:3px solid var(--paper)}
+.hero{padding-block:24px 64px}
+.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);color:var(--ink)}
+.hero h1 span{color:var(--rose)}
+.hero p{font-size:1.15rem;color:var(--muted);margin:18px 0 26px;max-width:30em}
+.blob{position:relative;aspect-ratio:1;max-width:100%}
+.doily{position:absolute;inset:0;width:100%;height:100%;animation:gira 140s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.doily{animation:none}}
+.blob img{position:absolute;inset:16%;width:68%;height:68%;object-fit:cover;border-radius:50%;border:6px solid var(--paper)}
+@media (max-width:780px){.hero .w{grid-template-columns:1fr}.blob{max-width:380px;margin:0 auto;width:100%}}
+section{padding-block:56px}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-size:clamp(2rem,4vw,3rem)}
+.title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 36px}
+@media (max-width:700px){.grid{grid-template-columns:1fr}}
+.pol{background:var(--paper);padding:14px 14px 20px;border-radius:6px;box-shadow:0 14px 30px -18px rgba(47,58,46,.6);transition:transform .25s}
+.pol:nth-child(odd){transform:rotate(-1.6deg)}.pol:nth-child(even){transform:rotate(1.4deg)}
+.pol:hover{transform:rotate(0) scale(1.01)}
+.pol .main{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:3px}
+.pol h3{font-size:1.5rem;margin:14px 4px 4px}
+.pol p{color:var(--muted);margin:0 4px 14px}
+.pol .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 4px}
+.price{font:700 1.5rem var(--display);color:var(--rose-d)}
+.pol .btns{display:flex;gap:8px;flex-wrap:wrap}
+.pix{background:var(--rose);color:#fff;border-radius:40px;margin-inline:max(16px,env(safe-area-inset-left,0px));max-width:1100px}
+@media (min-width:1140px){.pix{margin-inline:auto}}
+.pix .w{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:center}
+@media (max-width:780px){.pix .w{grid-template-columns:1fr}}
+.pix h2{font-size:clamp(2rem,4vw,3rem)}
+.pix label{display:block;font-weight:700;margin:14px 0 6px}
+.pix input{width:100%;font:600 1.05rem var(--body);padding:12px 16px;border-radius:999px;border:0;background:var(--paper);color:var(--ink)}
+.key{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0 6px;font:700 1.5rem var(--display)}
+.qrbox{background:var(--paper);color:var(--ink);border-radius:28px;padding:20px;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center}
+#qr{line-height:0;background:#fff;padding:8px;border-radius:12px}#qr img,#qr canvas{width:210px!important;height:210px!important}
+#qrTotal{font:700 1.4rem var(--display)}
+#copia{width:100%;height:64px;font:.72rem/1.4 ui-monospace,monospace;border-radius:12px;border:1px solid #ddd;padding:8px;resize:none;color:var(--muted);background:#fff}
+#toast{min-height:1.4em;font-weight:700;color:var(--wa)}
+.steps{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.steps div{background:var(--paper);border-radius:24px;padding:18px 22px;flex:1 1 220px;max-width:330px}
+.steps b{font-family:var(--display);font-size:1.2rem;display:block}
+.steps span{color:var(--muted)}
+footer{padding-block:40px;text-align:center;color:var(--muted)}
+footer b{color:var(--ink)}
+.story .w{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.story img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50% 50% 40px 40px;border:8px solid var(--paper)}
+.story h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px;color:var(--rose-d)}
+.story p{color:var(--muted);margin-bottom:14px;max-width:36em}
+@media (max-width:780px){.story .w{grid-template-columns:1fr}.story img{max-width:340px}}
+@media (max-width:520px){.hs{display:none}}
+:root{--m-bg:var(--paper);--m-ink:var(--ink);--m-muted:var(--muted);--m-accent:var(--rose-d);--m-accent-ink:#fff;--m-wa:var(--wa);--m-line:#dde5d9;--m-radius:28px;--m-font:var(--display);--m-body:var(--body)}
+
+/* ===== Elementos de crochê ===== */
+/* trama de pontos em V no fundo */
+body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='24'%3E%3Cpath d='M4 5l5 9 5-9M18 17l5 9M18 17l-5 9M18 -7l5 9M18 -7l-5 9' fill='none' stroke='%23c9d8c3' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E")}
+/* pesponto nos botões */
+.btn.rose,.btn.wa{outline:1.5px dashed rgba(255,255,255,.75);outline-offset:-5px}
+.btn.light{outline:1.5px dashed var(--rose);outline-offset:-5px}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+/* fio amarelo sob o destaque do título */
+.hero h1 span{text-decoration:underline wavy var(--yellow);text-decoration-thickness:4px;text-underline-offset:.14em}
+.fio{display:block;width:min(340px,100%);height:auto;margin-top:26px;color:var(--rose)}
+/* faixa com bico de crochê (barrado) em cima e embaixo */
+.lace{position:relative;background:var(--paper);margin-block:40px}
+.lace::before,.lace::after{content:"";position:absolute;left:0;right:0;height:17px;background:radial-gradient(circle at 17px 6px,var(--bg) 3px,transparent 3.6px),radial-gradient(circle at 17px 0,var(--paper) 16px,transparent 16.6px);background-size:34px 17px;background-repeat:repeat-x;background-position:center top}
+.lace::after{top:100%}.lace::before{bottom:100%;transform:scaleY(-1)}
+.lace>.w{position:relative}
+.lace>.w::before,.lace>.w::after{content:"";position:absolute;left:16px;right:16px;border-top:2px dashed var(--rose);opacity:.55}
+.lace>.w::before{top:-38px}.lace>.w::after{bottom:-38px}
+/* correntinha + florzinhas nos títulos */
+.corr{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:10px;color:var(--rose)}
+.corr i{display:block;width:120px;height:12px;background:radial-gradient(ellipse 6px 3.5px at 50% 50%,transparent 52%,currentColor 56%,currentColor 82%,transparent 88%) 0 50%/15px 12px repeat-x}
+.corr svg{width:26px;height:26px}
+/* polaroides costuradas, com flor de crochê no canto */
+.pol{position:relative;outline:2px dashed var(--rose);outline-offset:-7px;padding:18px 18px 22px;border-radius:10px}
+.pol .flor{position:absolute;top:-16px;left:50%;margin-left:-19px;width:38px;height:38px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2))}
+.pol:nth-child(4n+1) .flor{color:var(--rose)}.pol:nth-child(4n+2) .flor{color:#e9a43c}.pol:nth-child(4n+3) .flor{color:#8a66c2}.pol:nth-child(4n+4) .flor{color:#6fa35f}
+/* passos como quadradinhos de crochê (granny squares) */
+.steps{gap:34px 40px;padding-block:14px}
+.steps div{border-radius:10px;border:2px dashed var(--paper);box-shadow:0 0 0 5px var(--yellow),0 0 0 10px var(--rose),0 0 0 15px #8fb886;text-align:center}
+.steps div:nth-child(2){box-shadow:0 0 0 5px var(--rose),0 0 0 10px #8fb886,0 0 0 15px var(--yellow)}
+.steps div:nth-child(3){box-shadow:0 0 0 5px #8fb886,0 0 0 10px var(--yellow),0 0 0 15px var(--rose)}
+/* rodapé com barrado e novelo */
+footer{position:relative;background:var(--rose);color:#fff;margin-top:56px;padding-block:44px 36px}
+footer::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:17px;transform:scaleY(-1);background:radial-gradient(circle at 17px 6px,var(--bg) 3px,transparent 3.6px),radial-gradient(circle at 17px 0,var(--rose) 16px,transparent 16.6px);background-size:34px 17px;background-repeat:repeat-x;background-position:center top}
+footer b{color:#fff}footer a{color:#fff}
+footer svg{width:44px;height:44px;display:block;margin:0 auto 8px;color:var(--yellow)}
+dialog.buy{outline:2px dashed var(--rose);outline-offset:-9px}
+/* portfólio maior: 3 colunas, filtro e miniaturas */
+@media (min-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 30px}}
+.pol{display:flex;flex-direction:column}
+.pol .row{margin-top:auto}
+.pol .ph{position:relative}
+.pol .ph .main{aspect-ratio:1}
+.pol .cat{position:absolute;top:8px;left:8px;background:var(--paper);color:var(--rose-d);font:600 .78rem var(--display);padding:3px 10px;border-radius:999px}
+.thumbs{position:absolute;right:8px;bottom:8px;display:flex;gap:6px}
+.thumbs button{width:46px;height:46px;padding:0;border:3px solid var(--paper);border-radius:10px;overflow:hidden;cursor:pointer;background:var(--paper);opacity:.8}
+.thumbs button[aria-pressed="true"]{opacity:1;border-color:var(--rose)}
+.thumbs img{width:100%;height:100%;object-fit:cover;aspect-ratio:auto;border-radius:0}
+.price.ask{font-size:1.05rem;color:var(--muted)}
+.filtros{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:-12px 0 44px}
+.chip{font:600 .95rem var(--display);padding:9px 18px;border-radius:999px;border:2px dashed var(--rose);background:var(--paper);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--rose);color:#fff;border-color:var(--paper);box-shadow:0 0 0 2px var(--rose)}
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 6px 0 rgba(0,0,0,.15);z-index:5}
+.fab svg{width:30px;height:30px}
+/* Janela de compra: cada modelo define --m-* */
+dialog.buy{border:0;padding:24px;width:min(420px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;background:var(--m-bg);color:var(--m-ink);border-radius:var(--m-radius);font-family:var(--m-body);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog.buy::backdrop{background:rgba(20,10,14,.55);backdrop-filter:blur(3px)}
+dialog.buy[open]{display:flex;flex-direction:column;gap:14px}
+.buy-x{position:absolute;top:10px;right:12px;width:38px;height:38px;border:0;border-radius:50%;background:transparent;color:var(--m-muted);font-size:1.8rem;line-height:1;cursor:pointer}
+.buy-x:hover{color:var(--m-ink)}
+.buy-head{display:flex;gap:14px;align-items:center;padding-right:30px}
+.buy-head img{width:72px;height:72px;object-fit:cover;border-radius:calc(var(--m-radius) * .5);flex:none}
+.buy-cap{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--m-muted);font-weight:600}
+.buy-head h3{font-family:var(--m-font);font-size:1.35rem;margin:2px 0;line-height:1.15}
+.buy-price{font-family:var(--m-font);font-size:1.5rem;color:var(--m-accent);font-weight:600}
+.buy-steps{margin:0;padding-left:20px;color:var(--m-muted);font-size:.92rem;line-height:1.5}
+.buy-steps b{color:var(--m-ink)}
+.buy-qr{display:flex;justify-content:center}
+#qr{background:#fff;padding:10px;line-height:0;border-radius:calc(var(--m-radius) * .5)}
+#qr img,#qr canvas{width:220px!important;height:220px!important;max-width:100%}
+.buy-code{width:100%;height:60px;resize:none;font:.7rem/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--m-muted);background:transparent;border:1px solid var(--m-line);border-radius:calc(var(--m-radius) * .4);padding:8px;overflow-wrap:anywhere}
+.buy-btn{display:flex;justify-content:center;align-items:center;width:100%;padding:14px;border:0;border-radius:var(--m-btn-radius,999px);font:600 1rem var(--m-body);cursor:pointer;text-decoration:none}
+.buy-main{background:var(--m-accent);color:var(--m-accent-ink)}
+.buy-wa{background:var(--m-wa);color:#fff}
+.buy-key{font-size:.9rem;color:var(--m-muted);text-align:center}
+.buy-key b{color:var(--m-ink);font-variant-numeric:tabular-nums}
+.buy-link{background:none;border:0;color:var(--m-accent);font:600 .9rem var(--m-body);cursor:pointer;text-decoration:underline}
+.buy-toast{min-height:1.3em;text-align:center;font-weight:600;font-size:.9rem;color:var(--m-wa)}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.92 9.92 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.160l-.3-.18-3.07.9.92-3-.2-.31a8.2 8.2 0 1 1 6.85 3.75Zm4.5-6.14c-.25-.12-1.46-.72-1.690-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.33-2.91c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.42l-.75-1.82c-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.85 2.030c0 1.2.87 2.36.99 2.52.12.16 1.72 2.62 4.16 3.68 1.55.67 2.15.73 2.93.61.47-.07 1.46-.6 1.66-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  <symbol id="pixi" viewBox="0 0 24 24"><path fill="currentColor" d="M17.6 17.2a2.9 2.9 0 0 1-2.06-.85l-2.97-2.97a.56.56 0 0 0-.78 0l-2.98 2.98a2.9 2.9 0 0 1-2.06.85h-.58l3.76 3.76a3 3 0 0 0 4.25 0l3.77-3.77h-.35ZM6.75 6.8c.78 0 1.5.3 2.06.85l2.98 2.98c.21.21.56.21.78 0l2.97-2.97a2.9 2.9 0 0 1 2.06-.86h.36l-3.770-3.76a3 3 0 0 0-4.25 0L6.17 6.8h.58Zm14.37 3.07-2.28-2.28a.43.43 0 0 1-.16.03H17.6c-.54 0-1.07.22-1.45.6l-2.97 2.98a1.44 1.44 0 0 1-2.03 0L8.17 8.22a2.06 2.06 0 0 0-1.45-.6H5.31a.44.44 0 0 1-.15-.03l-2.28 2.28a3 3 0 0 0 0 4.25l2.28 2.28a.43.43 0 0 1 .15-.03h1.41c.54 0 1.07-.22 1.450-.6l2.98-2.98c.54-.54 1.48-.54 2.03 0l2.97 2.97c.38.39.91.6 1.45.6h1.08c.06 0 .11.02.16.04l2.28-2.28a3 3 0 0 0 0-4.25Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8Z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
+</svg>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="flor" viewBox="-12 -12 24 24"><g fill="currentColor"><circle cx="0" cy="-6" r="4.8"/><circle cx="5.7" cy="-1.85" r="4.8"/><circle cx="3.5" cy="4.85" r="4.8"/><circle cx="-3.5" cy="4.85" r="4.8"/><circle cx="-5.7" cy="-1.85" r="4.8"/></g><circle r="3.4" fill="#f4d77a"/><circle r="3.4" fill="none" stroke="#fffdf8" stroke-width=".9" stroke-dasharray="1.4 1.2"/></symbol>
+  <symbol id="novelo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="currentColor"/><g fill="none" stroke="#fffdf8" stroke-opacity=".75" stroke-width="2" stroke-linecap="round"><path d="M9 17c9-8 22-8 30 0"/><path d="M6 26c11-9 26-9 36 0"/><path d="M10 35c9-7 20-7 28 0"/><path d="M17 7c-7 10-7 24 0 34"/><path d="M30 6c7 11 7 25 0 36"/></g></symbol>
+</svg>
+
+<header><div class="w">
+  <a class="logo" href="#"><img src="img/logo.jpg" alt="Logo Cema Artes">Cema Artes</a>
+  <div style="display:flex;gap:8px;align-items:center"><a class="btn light sm" href="https://www.instagram.com/cemaartess/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg><span class="hs">@cemaartess</span></a><a class="btn wa sm" data-wa href="#"><svg><use href="#wa"/></svg><span class="hs">WhatsApp</span></a></div>
+</div></header>
+<section class="hero"><div class="w">
+  <div>
+    <h1>Crochê feito à mão com <span>muito carinho</span></h1>
+    <p>Bonecas, roupinhas e mochilas bordadas, todas feitas sob encomenda nas cores que você escolher.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn rose" href="#pecas">Ver as peças</a>
+      <a class="btn light" data-wa href="#"><svg><use href="#wa"/></svg>Encomendar</a>
+    </div>
+    <svg class="fio" viewBox="0 0 340 70" aria-hidden="true"><path d="M44 40c30 26 52-34 84-10s40 30 66 6 44-16 70-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0"/><use href="#novelo" x="4" y="14" width="46" height="46"/><g transform="translate(262 26) rotate(-18)"><rect x="0" y="-3" width="62" height="6" rx="3" fill="#c79a5b"/><path d="M60 0h8c5 0 7-3 6-7" fill="none" stroke="#c79a5b" stroke-width="4" stroke-linecap="round"/></g></svg>
+  </div>
+  <div class="blob"><svg class="doily" viewBox="-100 -100 200 200" aria-hidden="true"><circle cx="86.00" cy="0.00" r="12.4" fill="var(--paper)"/><circle cx="82.52" cy="24.23" r="12.4" fill="var(--paper)"/><circle cx="72.35" cy="46.50" r="12.4" fill="var(--paper)"/><circle cx="56.32" cy="64.99" r="12.4" fill="var(--paper)"/><circle cx="35.73" cy="78.23" r="12.4" fill="var(--paper)"/><circle cx="12.24" cy="85.12" r="12.4" fill="var(--paper)"/><circle cx="-12.24" cy="85.12" r="12.4" fill="var(--paper)"/><circle cx="-35.73" cy="78.23" r="12.4" fill="var(--paper)"/><circle cx="-56.32" cy="64.99" r="12.4" fill="var(--paper)"/><circle cx="-72.35" cy="46.50" r="12.4" fill="var(--paper)"/><circle cx="-82.52" cy="24.23" r="12.4" fill="var(--paper)"/><circle cx="-86.00" cy="0.00" r="12.4" fill="var(--paper)"/><circle cx="-82.52" cy="-24.23" r="12.4" fill="var(--paper)"/><circle cx="-72.35" cy="-46.50" r="12.4" fill="var(--paper)"/><circle cx="-56.32" cy="-64.99" r="12.4" fill="var(--paper)"/><circle cx="-35.73" cy="-78.23" r="12.4" fill="var(--paper)"/><circle cx="-12.24" cy="-85.12" r="12.4" fill="var(--paper)"/><circle cx="12.24" cy="-85.12" r="12.4" fill="var(--paper)"/><circle cx="35.73" cy="-78.23" r="12.4" fill="var(--paper)"/><circle cx="56.32" cy="-64.99" r="12.4" fill="var(--paper)"/><circle cx="72.35" cy="-46.50" r="12.4" fill="var(--paper)"/><circle cx="82.52" cy="-24.23" r="12.4" fill="var(--paper)"/><circle r="86" fill="var(--paper)"/><circle cx="87.00" cy="0.00" r="4.2" fill="var(--bg)"/><circle cx="83.48" cy="24.51" r="4.2" fill="var(--bg)"/><circle cx="73.19" cy="47.04" r="4.2" fill="var(--bg)"/><circle cx="56.97" cy="65.75" r="4.2" fill="var(--bg)"/><circle cx="36.14" cy="79.14" r="4.2" fill="var(--bg)"/><circle cx="12.38" cy="86.11" r="4.2" fill="var(--bg)"/><circle cx="-12.38" cy="86.11" r="4.2" fill="var(--bg)"/><circle cx="-36.14" cy="79.14" r="4.2" fill="var(--bg)"/><circle cx="-56.97" cy="65.75" r="4.2" fill="var(--bg)"/><circle cx="-73.19" cy="47.04" r="4.2" fill="var(--bg)"/><circle cx="-83.48" cy="24.51" r="4.2" fill="var(--bg)"/><circle cx="-87.00" cy="0.00" r="4.2" fill="var(--bg)"/><circle cx="-83.48" cy="-24.51" r="4.2" fill="var(--bg)"/><circle cx="-73.19" cy="-47.04" r="4.2" fill="var(--bg)"/><circle cx="-56.97" cy="-65.75" r="4.2" fill="var(--bg)"/><circle cx="-36.14" cy="-79.14" r="4.2" fill="var(--bg)"/><circle cx="-12.38" cy="-86.11" r="4.2" fill="var(--bg)"/><circle cx="12.38" cy="-86.11" r="4.2" fill="var(--bg)"/><circle cx="36.14" cy="-79.14" r="4.2" fill="var(--bg)"/><circle cx="56.97" cy="-65.75" r="4.2" fill="var(--bg)"/><circle cx="73.19" cy="-47.04" r="4.2" fill="var(--bg)"/><circle cx="83.48" cy="-24.51" r="4.2" fill="var(--bg)"/><circle r="79.5" fill="none" stroke="var(--rose)" stroke-width="1.6" stroke-dasharray="4 3.2"/><circle cx="74.81" cy="5.35" r="1.7" fill="var(--yellow)"/><circle cx="73.29" cy="15.94" r="1.7" fill="var(--yellow)"/><circle cx="70.27" cy="26.21" r="1.7" fill="var(--yellow)"/><circle cx="65.83" cy="35.94" r="1.7" fill="var(--yellow)"/><circle cx="60.04" cy="44.95" r="1.7" fill="var(--yellow)"/><circle cx="53.03" cy="53.03" r="1.7" fill="var(--yellow)"/><circle cx="44.95" cy="60.04" r="1.7" fill="var(--yellow)"/><circle cx="35.94" cy="65.83" r="1.7" fill="var(--yellow)"/><circle cx="26.21" cy="70.27" r="1.7" fill="var(--yellow)"/><circle cx="15.94" cy="73.29" r="1.7" fill="var(--yellow)"/><circle cx="5.35" cy="74.81" r="1.7" fill="var(--yellow)"/><circle cx="-5.35" cy="74.81" r="1.7" fill="var(--yellow)"/><circle cx="-15.94" cy="73.29" r="1.7" fill="var(--yellow)"/><circle cx="-26.21" cy="70.27" r="1.7" fill="var(--yellow)"/><circle cx="-35.94" cy="65.83" r="1.7" fill="var(--yellow)"/><circle cx="-44.95" cy="60.04" r="1.7" fill="var(--yellow)"/><circle cx="-53.03" cy="53.03" r="1.7" fill="var(--yellow)"/><circle cx="-60.04" cy="44.95" r="1.7" fill="var(--yellow)"/><circle cx="-65.83" cy="35.94" r="1.7" fill="var(--yellow)"/><circle cx="-70.27" cy="26.21" r="1.7" fill="var(--yellow)"/><circle cx="-73.29" cy="15.94" r="1.7" fill="var(--yellow)"/><circle cx="-74.81" cy="5.35" r="1.7" fill="var(--yellow)"/><circle cx="-74.81" cy="-5.35" r="1.7" fill="var(--yellow)"/><circle cx="-73.29" cy="-15.94" r="1.7" fill="var(--yellow)"/><circle cx="-70.27" cy="-26.21" r="1.7" fill="var(--yellow)"/><circle cx="-65.83" cy="-35.94" r="1.7" fill="var(--yellow)"/><circle cx="-60.04" cy="-44.95" r="1.7" fill="var(--yellow)"/><circle cx="-53.03" cy="-53.03" r="1.7" fill="var(--yellow)"/><circle cx="-44.95" cy="-60.04" r="1.7" fill="var(--yellow)"/><circle cx="-35.94" cy="-65.83" r="1.7" fill="var(--yellow)"/><circle cx="-26.21" cy="-70.27" r="1.7" fill="var(--yellow)"/><circle cx="-15.94" cy="-73.29" r="1.7" fill="var(--yellow)"/><circle cx="-5.35" cy="-74.81" r="1.7" fill="var(--yellow)"/><circle cx="5.35" cy="-74.81" r="1.7" fill="var(--yellow)"/><circle cx="15.94" cy="-73.29" r="1.7" fill="var(--yellow)"/><circle cx="26.21" cy="-70.27" r="1.7" fill="var(--yellow)"/><circle cx="35.94" cy="-65.83" r="1.7" fill="var(--yellow)"/><circle cx="44.95" cy="-60.04" r="1.7" fill="var(--yellow)"/><circle cx="53.03" cy="-53.03" r="1.7" fill="var(--yellow)"/><circle cx="60.04" cy="-44.95" r="1.7" fill="var(--yellow)"/><circle cx="65.83" cy="-35.94" r="1.7" fill="var(--yellow)"/><circle cx="70.27" cy="-26.21" r="1.7" fill="var(--yellow)"/><circle cx="73.29" cy="-15.94" r="1.7" fill="var(--yellow)"/><circle cx="74.81" cy="-5.35" r="1.7" fill="var(--yellow)"/><circle r="70" fill="var(--yellow)"/></svg><img src="img/boneca-bailarina.jpg" alt="Boneca bailarina de crochê"></div>
+</div></section>
+<section class="story lace"><div class="w">
+  <img src="img/casaquinho-chapeu.jpg" alt="Casaquinho de crochê rosa feito pela Cema">
+  <div><h2>A história da Cema</h2><p>A Cema aprendeu o crochê ainda menina, sentada ao lado da mãe, que ensinava os primeiros pontos com paciência e uma agulha de madeira. Por muitos anos, o crochê foi o seu momento de calma depois do trabalho e da casa: um novelo no colo, o chimarrão ao lado e as ideias tomando forma.</p>
+<p>Os presentes que fazia para a família começaram a chamar atenção. Uma amiga pediu um casaquinho para a filha, depois veio a encomenda de uma boneca, e logo os pedidos não paravam mais. Foi assim que nasceu a Cema Artes.</p>
+<p>Hoje cada peça continua sendo feita do jeito que a mãe ensinou: à mão, ponto a ponto, com fios escolhidos com cuidado e bordados feitos um a um. Quem encomenda leva para casa um pedaço dessa história.</p>
+
+  <a class="btn light" href="https://www.instagram.com/cemaartess/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>Siga @cemaartess</a></div>
+</div></section>
+<section id="pecas"><div class="w">
+  <div class="title"><h2>Peças da Cema</h2><p>Cada uma é única. Pode pedir igual ou do seu jeito.</p><div class="corr"><svg><use href="#flor"/></svg><i></i><svg><use href="#flor"/></svg></div></div>
+  <div class="filtros" id="filtros" role="group" aria-label="Filtrar peças"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+<section style="padding-top:0"><div class="w">
+  <div class="steps">
+    <div><b>1. Escolha</b><span>Veja as peças e escolha a sua preferida.</span></div>
+    <div><b>2. Compre</b><span>Toque em Comprar e pague com Pix.</span></div>
+    <div><b>3. Combine</b><span>Cor, tamanho e prazo pelo WhatsApp.</span></div>
+  </div>
+</div></section>
+<footer><svg aria-hidden="true"><use href="#novelo"/></svg><p><b>Cema Artes</b> · WhatsApp (51) 98290-6060 · Instagram <a href="https://www.instagram.com/cemaartess/" target="_blank" rel="noopener">@cemaartess</a></p></footer>
+<a class="fab" data-wa href="#" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
+<script>
+function cardHTML(p){
+const thumbs = p.imgs.length>1 ? `<div class="thumbs">${p.imgs.map((f,i)=>`<button type="button" data-foto="${f}" aria-pressed="${i===0}" aria-label="Foto ${i+1} de ${p.nome}"><img loading="lazy" src="${f}" alt=""></button>`).join("")}</div>` : "";
+const compra = p.preco
+ ? `<span class="price">${brl(p.preco)}</span><div class="btns"><button class="btn rose sm" type="button" data-pagar="${p.id}">Comprar</button>
+<a class="btn light sm" target="_blank" rel="noopener" href="${waPeca(p)}"><svg><use href="#wa"/></svg>Dúvidas</a></div>`
+ : `<span class="price ask">Sob consulta</span><div class="btns"><a class="btn wa sm" target="_blank" rel="noopener" href="${waPeca(p)}"><svg><use href="#wa"/></svg>Consultar valor</a></div>`;
+return `<article class="pol" data-cat="${p.cat}"><svg class="flor" aria-hidden="true"><use href="#flor"/></svg>
+<div class="ph"><img class="main" loading="lazy" src="${p.imgs[0]}" alt="${p.alt}"><span class="cat">${p.cat}</span>${thumbs}</div>
+<h3>${p.nome}</h3><p>${p.desc}</p><div class="row">${compra}</div></article>`}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* ===== Configuração da loja: edite aqui ===== */
+const LOJA = {
+  whatsapp: "5551982906060",
+  pixChave: "73916773020",        // CPF só com números
+  pixChaveTexto: "739.167.730-20",
+  pixNome: "CEMA ARTES",
+  pixCidade: "BRASIL"
+};
+const PECAS = [
+  { id:"boneca", nome:"Boneca Bailarina", cat:"Bonecas", imgs:["img/boneca-bailarina.jpg"],
+    alt:"Boneca de crochê com vestido e sapatilhas rosa e cabelo cacheado",
+    desc:"Amigurumi de bailarina com vestidinho rosa, sapatilhas e cabelo cacheado comprido.", preco:240 },
+  { id:"casaco", nome:"Casaquinho e chapéu", cat:"Infantil", imgs:["img/casaquinho-chapeu.jpg","img/casaquinho-rosa.jpg"],
+    alt:"Casaquinho infantil rosa de crochê com flores bordadas e chapéu amarelo",
+    desc:"Casaquinho rosa com gola, botões de flor e buquê bordado, com chapéu amarelo combinando.", preco:260 },
+  { id:"mochila", nome:"Mochila bordada", cat:"Bolsas", imgs:["img/mochila-bordada.jpg"],
+    alt:"Mochila colorida de crochê em laranja, roxo e pink com flores bordadas",
+    desc:"Mochila colorida rica em detalhes, com bolsos e flores bordadas à mão.", preco:250 },
+  { id:"conjunto", nome:"Conjunto blusa e saia", cat:"Infantil", imgs:["img/conjunto-infantil.jpg"],
+    alt:"Conjunto infantil de crochê bege com blusa de alça e saia com flor aplicada",
+    desc:"Conjunto infantil com blusinha de alça e saia com flor em relevo e pérolas.", preco:220 },
+  { id:"jardim", nome:"Casaco jardim bordado", cat:"Infantil", imgs:["img/casaco-jardim-2.jpg","img/casaco-jardim.jpg"],
+    alt:"Casaco infantil rosa de crochê com bolsos e flores coloridas bordadas",
+    desc:"Casaco rosa com bolsos e um jardim de flores bordadas à mão no corpo e nas mangas.", preco:null },
+  { id:"bichinhos", nome:"Casaquinho ursinho e coelho", cat:"Infantil", imgs:["img/casaquinho-bichinhos.jpg","img/casaquinho-bichinhos-2.jpg"],
+    alt:"Casaquinho verde-água de crochê com ursinho, coelho e ramos bordados",
+    desc:"Casaquinho verde-água com ursinho e coelho de crochê aplicados e raminhos bordados.", preco:null },
+  { id:"vermelho", nome:"Casaquinho vermelho com buquê", cat:"Infantil", imgs:["img/casaquinho-vermelho.jpg"],
+    alt:"Casaquinho infantil vermelho de crochê com buquê de rosas bordado",
+    desc:"Casaquinho vermelho com gola, botões de flor e buquê de rosinhas bordado.", preco:null },
+  { id:"colete", nome:"Colete bicolor com bolsos", cat:"Infantil", imgs:["img/colete-bicolor.jpg"],
+    alt:"Colete infantil de crochê metade lilás e metade rosa, com bolsos",
+    desc:"Colete metade lilás, metade rosa, com barra roxa, bolsos e botões de madeira.", preco:null },
+  { id:"lilas", nome:"Blusa lilás sem manga", cat:"Infantil", imgs:["img/blusa-lilas.jpg"],
+    alt:"Blusa de crochê lilás sem manga em ponto trabalhado",
+    desc:"Blusa sem manga em ponto trabalhado, com barra canelada.", preco:null },
+  { id:"bolsarosa", nome:"Bolsa rosa bordada", cat:"Bolsas", imgs:["img/bolsa-rosa.jpg","img/bolsa-rosa-2.jpg"],
+    alt:"Bolsa de crochê rosa com bolsos, franja e flores bordadas",
+    desc:"Bolsa com zíper, alça regulável, bolsos externos, franja e flores bordadas.", preco:null },
+  { id:"bolsaflor", nome:"Bolsa de quadradinhos floridos", cat:"Bolsas", imgs:["img/bolsa-quadradinhos.jpg"],
+    alt:"Bolsa de crochê crua com quadradinhos de flores coloridas",
+    desc:"Bolsa crua com alças firmes e quadradinhos de flores, cada um de uma cor.", preco:null },
+  { id:"manta", nome:"Manta de quadrados coloridos", cat:"Casa", imgs:["img/manta-quadrados.jpg"],
+    alt:"Manta de crochê com quadrados de várias cores e barrado lilás",
+    desc:"Manta de quadrados em muitas cores, com barrado lilás em toda a volta.", preco:null },
+  { id:"mantaflores", nome:"Manta de quadradinhos floridos", cat:"Casa", imgs:["img/manta-flores.jpg"],
+    alt:"Manta de crochê com quadradinhos de flores coloridas unidos em bege",
+    desc:"Manta de quadradinhos com flores em relevo, cada um de uma cor, unidos em bege.", preco:null },
+  { id:"mantalistrada", nome:"Manta listrada rosa e marinho", cat:"Casa", imgs:["img/manta-listrada.jpg"],
+    alt:"Manta de crochê listrada em tons de rosa, cinza e azul-marinho com barrado marinho",
+    desc:"Manta em listras de rosa, cinza e azul-marinho, com barrado marinho em toda a volta.", preco:null },
+  { id:"trilho", nome:"Trilho de mesa com flores", cat:"Casa", imgs:["img/trilho-mesa.jpg"],
+    alt:"Trilho de mesa de crochê branco com flores e folhas aplicadas",
+    desc:"Trilho de mesa branco rendado, com bico e flores com folhas aplicadas.", preco:null }
+];
+/* ============================================ */
+const brl = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const wa = msg => `https://wa.me/${LOJA.whatsapp}?text=${encodeURIComponent(msg)}`;
+const waPeca = p => wa(p.preco ? `Olá, Cema! Tenho interesse na peça "${p.nome}" (${brl(p.preco)}) que vi no site. Qual o prazo?` : `Olá, Cema! Tenho interesse na peça "${p.nome}" que vi no site. Pode me passar o valor e o prazo?`);
+const $ = id => document.getElementById(id);
+
+document.querySelectorAll("[data-wa]").forEach(a=>{
+  a.href = wa("Olá, Cema! Vi o site da Cema Artes e gostaria de fazer uma encomenda.");
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+const grid = $("grid");
+PECAS.forEach((p,i)=>{
+  const wrap = document.createElement("div");
+  wrap.innerHTML = cardHTML(p, i).trim();
+  grid.appendChild(wrap.firstElementChild);
+});
+
+/* ---- Pix copia e cola (BR Code estático, padrão Banco Central) ---- */
+const tlv = (id, v) => id + String(v.length).padStart(2,"0") + v;
+const limpa = (s,n) => s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9 ]/g,"").toUpperCase().slice(0,n);
+function crc16(s){
+  let c = 0xFFFF;
+  for(let i=0;i<s.length;i++){
+    c ^= s.charCodeAt(i) << 8;
+    for(let j=0;j<8;j++) c = (c & 0x8000) ? ((c << 1) ^ 0x1021) & 0xFFFF : (c << 1) & 0xFFFF;
+  }
+  return c.toString(16).toUpperCase().padStart(4,"0");
+}
+function brcode(valor, desc){
+  const conta = tlv("00","br.gov.bcb.pix") + tlv("01",LOJA.pixChave) + (desc ? tlv("02",desc) : "");
+  const s = tlv("00","01") + tlv("26",conta) + tlv("52","0000") + tlv("53","986")
+        + (valor>0 ? tlv("54",valor.toFixed(2)) : "")
+        + tlv("58","BR") + tlv("59",limpa(LOJA.pixNome,25)) + tlv("60",limpa(LOJA.pixCidade,15))
+        + tlv("62", tlv("05","***")) + "6304";
+  return s + crc16(s);
+}
+
+/* ---- Janela de compra (abre só ao clicar em Comprar) ---- */
+const dlg = document.createElement("dialog");
+dlg.className = "buy";
+dlg.setAttribute("aria-labelledby","buyTitle");
+dlg.innerHTML = `
+  <button class="buy-x" type="button" aria-label="Fechar">×</button>
+  <div class="buy-head">
+    <img id="buyImg" alt="">
+    <div><div class="buy-cap">Pagamento com Pix</div><h3 id="buyTitle"></h3><div class="buy-price" id="buyPrice"></div></div>
+  </div>
+  <ol class="buy-steps">
+    <li>Abra o app do seu banco e escolha <b>Pix</b>.</li>
+    <li>Leia o QR Code ou use o <b>Pix copia e cola</b>.</li>
+    <li>Envie o comprovante pelo WhatsApp para combinar a entrega.</li>
+  </ol>
+  <div class="buy-qr"><div id="qr"></div></div>
+  <textarea id="copia" class="buy-code" readonly aria-label="Código Pix copia e cola"></textarea>
+  <button class="buy-btn buy-main" id="copyCode" type="button">Copiar código Pix</button>
+  <div class="buy-key">Chave Pix (CPF): <b>${LOJA.pixChaveTexto}</b> <button type="button" id="copyKey" class="buy-link">copiar</button></div>
+  <a class="buy-btn buy-wa" id="sendProof" target="_blank" rel="noopener" href="#">Enviar comprovante no WhatsApp</a>
+  <div class="buy-toast" id="toast" aria-live="polite"></div>`;
+document.body.appendChild(dlg);
+
+function abrirCompra(p){
+  $("buyImg").src = p.imgs[0]; $("buyImg").alt = p.alt;
+  $("buyTitle").textContent = p.nome;
+  $("buyPrice").textContent = brl(p.preco);
+  const code = brcode(p.preco, limpa(p.nome, 40));
+  $("copia").value = code;
+  const box = $("qr"); box.innerHTML = "";
+  if(window.QRCode) new QRCode(box,{text:code,width:440,height:440,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+  $("sendProof").href = wa(`Olá, Cema! Fiz o Pix de ${brl(p.preco)} referente a: ${p.nome}. Segue o comprovante.`);
+  $("toast").textContent = "";
+  if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+}
+grid.addEventListener("click", e=>{
+  const t = e.target.closest("[data-foto]");
+  if(t){ const c=t.closest("article"); c.querySelector(".main").src=t.dataset.foto; c.querySelectorAll("[data-foto]").forEach(x=>x.setAttribute("aria-pressed", x===t)); return; }
+  const b = e.target.closest("[data-pagar]"); if(!b) return;
+  abrirCompra(PECAS.find(x=>x.id===b.dataset.pagar));
+});
+dlg.querySelector(".buy-x").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{ if(e.target===dlg) dlg.close(); });
+
+const toast = msg => { const t=$("toast"); t.textContent=msg; clearTimeout(toast._t); toast._t=setTimeout(()=>t.textContent="",2600); };
+function copiar(texto, okMsg, el){
+  const falha = () => { if(el){ el.focus(); el.select?.(); } toast("Selecionado. Use Copiar do seu aparelho."); };
+  try{ navigator.clipboard.writeText(texto).then(()=>toast(okMsg), falha); }catch(e){ falha(); }
+}
+$("copyCode").addEventListener("click",()=>copiar($("copia").value,"Código Pix copiado! Cole no app do seu banco.",$("copia")));
+$("copyKey").addEventListener("click",()=>copiar(LOJA.pixChave,"Chave Pix copiada!"));
+window.__abrirCompra = abrirCompra;
+
+/* filtro por categoria */
+const filtros = $("filtros");
+if(filtros){
+  const cats = ["Todas", ...new Set(PECAS.map(p=>p.cat))];
+  filtros.innerHTML = cats.map((c,i)=>`<button type="button" class="chip" aria-pressed="${i===0}" data-cat="${c}">${c}</button>`).join("");
+  filtros.addEventListener("click", e=>{
+    const b=e.target.closest("[data-cat]"); if(!b) return;
+    filtros.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed", x===b));
+    grid.querySelectorAll("article").forEach(a=>{ a.hidden = b.dataset.cat!=="Todas" && a.dataset.cat!==b.dataset.cat; });
+  });
+}
+</script>
+</body></html>
