@@ -159,6 +159,7 @@ dialog.buy{outline:2px dashed var(--rose);outline-offset:-9px}
 .fopc .pz{color:var(--ink);font-weight:600}
 .fopc small{color:var(--muted);line-height:1.4}
 .fopc .btn{margin-top:auto;align-self:flex-start}
+.faviso{margin:16px auto 0;max-width:46em;text-align:center;background:#fff6d8;border:2px dashed #e0b84a;border-radius:16px;padding:12px 16px;font-weight:600}
 .fobs{margin-top:18px;color:var(--muted);font-size:.92rem;text-align:center;max-width:46em;margin-inline:auto}
 .fobs a{color:var(--rose-d)}
 @media (max-width:760px){.frete{grid-template-columns:1fr}.fopc{grid-template-columns:1fr}}
@@ -186,6 +187,10 @@ dialog.buy[open]{display:flex;flex-direction:column;gap:14px}
 .buy-key b{color:var(--m-ink);font-variant-numeric:tabular-nums}
 .buy-link{background:none;border:0;color:var(--m-accent);font:600 .9rem var(--m-body);cursor:pointer;text-decoration:underline}
 .buy-toast{min-height:1.3em;text-align:center;font-weight:600;font-size:.9rem;color:var(--m-wa)}
+.buy-aviso{display:grid;gap:4px;background:#fff6d8;border:2px dashed #e0b84a;border-radius:calc(var(--m-radius) * .5);padding:12px 14px;font-size:.9rem;line-height:1.45;color:var(--m-ink)}
+.buy-aviso b{font-family:var(--m-font);font-size:1rem}
+.buy-aviso span{color:var(--m-muted)}
+.buy-aviso a{color:var(--m-accent);font-weight:700;justify-self:start}
 </style>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.92 9.92 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.160l-.3-.18-3.07.9.92-3-.2-.31a8.2 8.2 0 1 1 6.85 3.75Zm4.5-6.14c-.25-.12-1.46-.72-1.690-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.78.96-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.33-2.91c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.42l-.75-1.82c-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.85 2.030c0 1.2.87 2.36.99 2.52.12.16 1.72 2.62 4.16 3.68 1.55.67 2.15.73 2.93.61.47-.07 1.46-.6 1.66-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
@@ -366,10 +371,13 @@ dlg.innerHTML = `
     <img id="buyImg" alt="">
     <div><div class="buy-cap">Pagamento com Pix</div><h3 id="buyTitle"></h3><div class="buy-price" id="buyPrice"></div></div>
   </div>
+  <div class="buy-aviso" role="note"><b>Feita sob encomenda, sem pronta entrega</b>
+    <span>Cada peça é confeccionada à mão depois do pedido e merece o seu tempo de dedicação. Combine com a Cema o prazo de confecção antes de pagar.</span>
+    <a id="combinarPrazo" target="_blank" rel="noopener" href="#">Combinar o prazo no WhatsApp</a></div>
   <ol class="buy-steps">
     <li>Abra o app do seu banco e escolha <b>Pix</b>.</li>
     <li>Leia o QR Code ou use o <b>Pix copia e cola</b>.</li>
-    <li>Envie o comprovante pelo WhatsApp para combinar a entrega.</li>
+    <li>Envie o comprovante pelo WhatsApp para confirmar o pedido e a entrega.</li>
   </ol>
   <div class="buy-qr"><div id="qr"></div></div>
   <textarea id="copia" class="buy-code" readonly aria-label="Código Pix copia e cola"></textarea>
@@ -388,6 +396,7 @@ function abrirCompra(p){
   const box = $("qr"); box.innerHTML = "";
   if(window.QRCode) new QRCode(box,{text:code,width:440,height:440,colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
   $("sendProof").href = wa(`Olá, Cema! Fiz o Pix de ${brl(p.preco)} referente a: ${p.nome}. Segue o comprovante.`);
+  $("combinarPrazo").href = wa(`Olá, Cema! Quero encomendar a peça "${p.nome}" (${brl(p.preco)}) que vi no site. Qual seria o prazo de confecção?`);
   $("toast").textContent = "";
   if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
 }
@@ -464,7 +473,8 @@ function precoFrete(tab,z,kg){ const [b,x]=tab[z]; return Math.ceil(b+x*Math.max
     res.innerHTML=`<p class="fdest">Envio de ${FRETE.origem} para <b>${dest}</b> · CEP ${cep.value}</p><div class="fopc">
       ${op("PAC",pac,`${FRETE.PAC[z][2]} dias úteis`,"O mais econômico.")}
       ${op("SEDEX",sx,`${FRETE.SEDEX[z][2]} ${FRETE.SEDEX[z][2]==="1"?"dia útil":"dias úteis"}`,"Mais rápido, com prioridade.")}
-      ${op("SEDEX 10",s10,"Próximo dia útil, até 10h","Só para capitais e algumas cidades. Confirmamos se atende o seu CEP.")}</div>`;
+      ${op("SEDEX 10",s10,"Próximo dia útil, até 10h","Só para capitais e algumas cidades. Confirmamos se atende o seu CEP.")}</div>
+      <p class="faviso">Lembrete: nenhuma peça é pronta entrega. O prazo dos Correios começa a contar depois que a peça fica pronta, e o tempo de confecção é combinado com a Cema.</p>`;
   });
 })();
 </script>
