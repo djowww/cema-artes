@@ -81,6 +81,10 @@ footer b{color:var(--ink)}
 .story img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50% 50% 40px 40px;border:8px solid var(--paper)}
 .story h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px;color:var(--rose-d)}
 .story p{color:var(--muted);margin-bottom:14px;max-width:36em}
+.story figure{margin:0;display:grid;justify-items:center;gap:14px}
+.story figure img{object-position:50% 30%;box-shadow:0 0 0 6px var(--rose),0 14px 30px rgba(47,58,46,.18)}
+.story figcaption{display:inline-flex;align-items:center;gap:8px;font:600 1.05rem var(--display);color:var(--rose-d);background:var(--paper);padding:8px 18px;border-radius:999px;border:2px dashed var(--rose)}
+.story figcaption svg{width:20px;height:20px;color:var(--rose)}
 @media (max-width:780px){.story .w{grid-template-columns:1fr}.story img{max-width:340px}}
 @media (max-width:520px){.hs{display:none}}
 :root{--m-bg:var(--paper);--m-ink:var(--ink);--m-muted:var(--muted);--m-accent:var(--rose-d);--m-accent-ink:#fff;--m-wa:var(--wa);--m-line:#dde5d9;--m-radius:28px;--m-font:var(--display);--m-body:var(--body)}
@@ -211,10 +215,10 @@ dialog.buy[open]{display:flex;flex-direction:column;gap:14px}
   <div class="blob"><svg class="doily" viewBox="-100 -100 200 200" aria-hidden="true"><circle cx="86.00" cy="0.00" r="12.4" fill="var(--paper)"/><circle cx="82.52" cy="24.23" r="12.4" fill="var(--paper)"/><circle cx="72.35" cy="46.50" r="12.4" fill="var(--paper)"/><circle cx="56.32" cy="64.99" r="12.4" fill="var(--paper)"/><circle cx="35.73" cy="78.23" r="12.4" fill="var(--paper)"/><circle cx="12.24" cy="85.12" r="12.4" fill="var(--paper)"/><circle cx="-12.24" cy="85.12" r="12.4" fill="var(--paper)"/><circle cx="-35.73" cy="78.23" r="12.4" fill="var(--paper)"/><circle cx="-56.32" cy="64.99" r="12.4" fill="var(--paper)"/><circle cx="-72.35" cy="46.50" r="12.4" fill="var(--paper)"/><circle cx="-82.52" cy="24.23" r="12.4" fill="var(--paper)"/><circle cx="-86.00" cy="0.00" r="12.4" fill="var(--paper)"/><circle cx="-82.52" cy="-24.23" r="12.4" fill="var(--paper)"/><circle cx="-72.35" cy="-46.50" r="12.4" fill="var(--paper)"/><circle cx="-56.32" cy="-64.99" r="12.4" fill="var(--paper)"/><circle cx="-35.73" cy="-78.23" r="12.4" fill="var(--paper)"/><circle cx="-12.24" cy="-85.12" r="12.4" fill="var(--paper)"/><circle cx="12.24" cy="-85.12" r="12.4" fill="var(--paper)"/><circle cx="35.73" cy="-78.23" r="12.4" fill="var(--paper)"/><circle cx="56.32" cy="-64.99" r="12.4" fill="var(--paper)"/><circle cx="72.35" cy="-46.50" r="12.4" fill="var(--paper)"/><circle cx="82.52" cy="-24.23" r="12.4" fill="var(--paper)"/><circle r="86" fill="var(--paper)"/><circle cx="87.00" cy="0.00" r="4.2" fill="var(--bg)"/><circle cx="83.48" cy="24.51" r="4.2" fill="var(--bg)"/><circle cx="73.19" cy="47.04" r="4.2" fill="var(--bg)"/><circle cx="56.97" cy="65.75" r="4.2" fill="var(--bg)"/><circle cx="36.14" cy="79.14" r="4.2" fill="var(--bg)"/><circle cx="12.38" cy="86.11" r="4.2" fill="var(--bg)"/><circle cx="-12.38" cy="86.11" r="4.2" fill="var(--bg)"/><circle cx="-36.14" cy="79.14" r="4.2" fill="var(--bg)"/><circle cx="-56.97" cy="65.75" r="4.2" fill="var(--bg)"/><circle cx="-73.19" cy="47.04" r="4.2" fill="var(--bg)"/><circle cx="-83.48" cy="24.51" r="4.2" fill="var(--bg)"/><circle cx="-87.00" cy="0.00" r="4.2" fill="var(--bg)"/><circle cx="-83.48" cy="-24.51" r="4.2" fill="var(--bg)"/><circle cx="-73.19" cy="-47.04" r="4.2" fill="var(--bg)"/><circle cx="-56.97" cy="-65.75" r="4.2" fill="var(--bg)"/><circle cx="-36.14" cy="-79.14" r="4.2" fill="var(--bg)"/><circle cx="-12.38" cy="-86.11" r="4.2" fill="var(--bg)"/><circle cx="12.38" cy="-86.11" r="4.2" fill="var(--bg)"/><circle cx="36.14" cy="-79.14" r="4.2" fill="var(--bg)"/><circle cx="56.97" cy="-65.75" r="4.2" fill="var(--bg)"/><circle cx="73.19" cy="-47.04" r="4.2" fill="var(--bg)"/><circle cx="83.48" cy="-24.51" r="4.2" fill="var(--bg)"/><circle r="79.5" fill="none" stroke="var(--rose)" stroke-width="1.6" stroke-dasharray="4 3.2"/><circle cx="74.81" cy="5.35" r="1.7" fill="var(--yellow)"/><circle cx="73.29" cy="15.94" r="1.7" fill="var(--yellow)"/><circle cx="70.27" cy="26.21" r="1.7" fill="var(--yellow)"/><circle cx="65.83" cy="35.94" r="1.7" fill="var(--yellow)"/><circle cx="60.04" cy="44.95" r="1.7" fill="var(--yellow)"/><circle cx="53.03" cy="53.03" r="1.7" fill="var(--yellow)"/><circle cx="44.95" cy="60.04" r="1.7" fill="var(--yellow)"/><circle cx="35.94" cy="65.83" r="1.7" fill="var(--yellow)"/><circle cx="26.21" cy="70.27" r="1.7" fill="var(--yellow)"/><circle cx="15.94" cy="73.29" r="1.7" fill="var(--yellow)"/><circle cx="5.35" cy="74.81" r="1.7" fill="var(--yellow)"/><circle cx="-5.35" cy="74.81" r="1.7" fill="var(--yellow)"/><circle cx="-15.94" cy="73.29" r="1.7" fill="var(--yellow)"/><circle cx="-26.21" cy="70.27" r="1.7" fill="var(--yellow)"/><circle cx="-35.94" cy="65.83" r="1.7" fill="var(--yellow)"/><circle cx="-44.95" cy="60.04" r="1.7" fill="var(--yellow)"/><circle cx="-53.03" cy="53.03" r="1.7" fill="var(--yellow)"/><circle cx="-60.04" cy="44.95" r="1.7" fill="var(--yellow)"/><circle cx="-65.83" cy="35.94" r="1.7" fill="var(--yellow)"/><circle cx="-70.27" cy="26.21" r="1.7" fill="var(--yellow)"/><circle cx="-73.29" cy="15.94" r="1.7" fill="var(--yellow)"/><circle cx="-74.81" cy="5.35" r="1.7" fill="var(--yellow)"/><circle cx="-74.81" cy="-5.35" r="1.7" fill="var(--yellow)"/><circle cx="-73.29" cy="-15.94" r="1.7" fill="var(--yellow)"/><circle cx="-70.27" cy="-26.21" r="1.7" fill="var(--yellow)"/><circle cx="-65.83" cy="-35.94" r="1.7" fill="var(--yellow)"/><circle cx="-60.04" cy="-44.95" r="1.7" fill="var(--yellow)"/><circle cx="-53.03" cy="-53.03" r="1.7" fill="var(--yellow)"/><circle cx="-44.95" cy="-60.04" r="1.7" fill="var(--yellow)"/><circle cx="-35.94" cy="-65.83" r="1.7" fill="var(--yellow)"/><circle cx="-26.21" cy="-70.27" r="1.7" fill="var(--yellow)"/><circle cx="-15.94" cy="-73.29" r="1.7" fill="var(--yellow)"/><circle cx="-5.35" cy="-74.81" r="1.7" fill="var(--yellow)"/><circle cx="5.35" cy="-74.81" r="1.7" fill="var(--yellow)"/><circle cx="15.94" cy="-73.29" r="1.7" fill="var(--yellow)"/><circle cx="26.21" cy="-70.27" r="1.7" fill="var(--yellow)"/><circle cx="35.94" cy="-65.83" r="1.7" fill="var(--yellow)"/><circle cx="44.95" cy="-60.04" r="1.7" fill="var(--yellow)"/><circle cx="53.03" cy="-53.03" r="1.7" fill="var(--yellow)"/><circle cx="60.04" cy="-44.95" r="1.7" fill="var(--yellow)"/><circle cx="65.83" cy="-35.94" r="1.7" fill="var(--yellow)"/><circle cx="70.27" cy="-26.21" r="1.7" fill="var(--yellow)"/><circle cx="73.29" cy="-15.94" r="1.7" fill="var(--yellow)"/><circle cx="74.81" cy="-5.35" r="1.7" fill="var(--yellow)"/><circle r="70" fill="var(--yellow)"/></svg><img src="img/boneca-bailarina.jpg" alt="Boneca bailarina de crochê"></div>
 </div></section>
 <section class="story lace"><div class="w">
-  <img src="img/casaquinho-chapeu.jpg" alt="Casaquinho de crochê rosa feito pela Cema">
+  <figure class="eu"><img src="img/cema.jpg" alt="Retrato da Cema, a artesã por trás da Cema Artes, de jaqueta jeans e cabelo comprido"><figcaption><svg><use href="#flor"/></svg>Cema · Passo de Torres (SC)</figcaption></figure>
   <div><h2>A história da Cema</h2><p>A Cema aprendeu o crochê ainda menina, sentada ao lado da mãe, que ensinava os primeiros pontos com paciência e uma agulha de madeira. Por muitos anos, o crochê foi o seu momento de calma depois do trabalho e da casa: um novelo no colo, o chimarrão ao lado e as ideias tomando forma.</p>
 <p>Os presentes que fazia para a família começaram a chamar atenção. Uma amiga pediu um casaquinho para a filha, depois veio a encomenda de uma boneca, e logo os pedidos não paravam mais. Foi assim que nasceu a Cema Artes.</p>
-<p>Hoje cada peça continua sendo feita do jeito que a mãe ensinou: à mão, ponto a ponto, com fios escolhidos com cuidado e bordados feitos um a um. Quem encomenda leva para casa um pedaço dessa história.</p>
+<p>Hoje, em Passo de Torres, no litoral sul de Santa Catarina, cada peça continua sendo feita do jeito que a mãe ensinou: à mão, ponto a ponto, com fios escolhidos com cuidado e bordados feitos um a um. Quem encomenda leva para casa um pedaço dessa história.</p>
 
   <a class="btn light" href="https://www.instagram.com/cemaartess/" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>Siga @cemaartess</a></div>
 </div></section>
@@ -238,9 +242,9 @@ dialog.buy[open]{display:flex;flex-direction:column;gap:14px}
     <button class="btn rose" type="submit">Calcular</button>
   </form>
   <div id="freteRes" aria-live="polite"></div>
-  <p class="fobs">Valores estimados pela tabela de balcão dos Correios, com envio a partir de Porto Alegre (RS). O valor exato é confirmado pelo WhatsApp antes de postar. Se preferir, confira também no <a href="https://www2.correios.com.br/sistemas/precosPrazos/" target="_blank" rel="noopener">site dos Correios</a>.</p>
+  <p class="fobs">Valores estimados pela tabela de balcão dos Correios, com envio a partir de Passo de Torres (SC), CEP 88980-000. O valor exato é confirmado pelo WhatsApp antes de postar. Se preferir, confira também no <a href="https://www2.correios.com.br/sistemas/precosPrazos/" target="_blank" rel="noopener">site dos Correios</a>.</p>
 </div></section>
-<footer><svg aria-hidden="true"><use href="#novelo"/></svg><p><b>Cema Artes</b> · WhatsApp (51) 98290-6060 · Instagram <a href="https://www.instagram.com/cemaartess/" target="_blank" rel="noopener">@cemaartess</a></p></footer>
+<footer><svg aria-hidden="true"><use href="#novelo"/></svg><p><b>Cema Artes</b> · Passo de Torres (SC) · WhatsApp (51) 98290-6060 · Instagram <a href="https://www.instagram.com/cemaartess/" target="_blank" rel="noopener">@cemaartess</a></p></footer>
 <a class="fab" data-wa href="#" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
 <script>
 function cardHTML(p){
@@ -419,12 +423,13 @@ if(filtros){
 
 /* ---- Calculadora de frete (estimativa pela tabela de balcão dos Correios) ---- */
 const FRETE = {
-  origem: "Porto Alegre (RS)",
-  // zonas a partir da Grande Porto Alegre: 0 local, 1 resto do RS, 2 SC/PR, 3 Sudeste e MS, 4 Centro-Oeste/BA/SE/TO, 5 Nordeste, 6 Norte
-  zonaUF: {RS:1,SC:2,PR:2,SP:3,RJ:3,MG:3,ES:3,MS:3,DF:4,GO:4,MT:4,TO:4,BA:4,SE:4,AL:5,PE:5,PB:5,RN:5,CE:5,PI:5,MA:5,PA:6,AP:6,AM:6,RR:6,RO:6,AC:6},
+  origem: "Passo de Torres (SC)",
+  cepOrigem: "88980-000",
+  // zonas a partir de Passo de Torres (SC): 0 região (sul de SC e litoral norte do RS), 1 resto de SC, 2 RS/PR, 3 Sudeste e MS, 4 Centro-Oeste/BA/SE/TO, 5 Nordeste, 6 Norte
+  zonaUF: {SC:1,RS:2,PR:2,SP:3,RJ:3,MG:3,ES:3,MS:3,DF:4,GO:4,MT:4,TO:4,BA:4,SE:4,AL:5,PE:5,PB:5,RN:5,CE:5,PI:5,MA:5,PA:6,AP:6,AM:6,RR:6,RO:6,AC:6},
   // [até 1 kg, cada kg a mais, prazo em dias úteis]
   PAC:   [[22,3,"3 a 4"],[27,4,"4 a 6"],[33,6,"5 a 7"],[40,8,"6 a 8"],[52,11,"7 a 10"],[60,14,"8 a 12"],[72,18,"10 a 15"]],
-  SEDEX: [[26,4,"1"],[38,7,"1 a 2"],[55,12,"2 a 3"],[70,16,"2 a 3"],[95,22,"3 a 4"],[110,28,"3 a 5"],[130,34,"4 a 7"]],
+  SEDEX: [[26,4,"1 a 2"],[38,7,"1 a 2"],[55,12,"2 a 3"],[70,16,"2 a 3"],[95,22,"3 a 4"],[110,28,"3 a 5"],[130,34,"4 a 7"]],
   sedex10Extra: 40
 };
 const FAIXAS_CEP = [[1000,19999,"SP"],[20000,28999,"RJ"],[29000,29999,"ES"],[30000,39999,"MG"],[40000,48999,"BA"],[49000,49999,"SE"],
@@ -449,7 +454,7 @@ function precoFrete(tab,z,kg){ const [b,x]=tab[z]; return Math.ceil(b+x*Math.max
     try{ const r=await fetch(`https://brasilapi.com.br/api/cep/v2/${c}`,{signal:AbortSignal.timeout?AbortSignal.timeout(5000):undefined});
       if(r.ok){ const j=await r.json(); cidade=j.city||""; uf=j.state||uf; } }catch(_){}
     if(!uf){ res.innerHTML=`<p class="fdest ferr">Não encontrei esse CEP. Confira os números.</p>`; return; }
-    const n=+c.slice(0,5); const z=(n>=90000&&n<=94999)?0:FRETE.zonaUF[uf];
+    const n=+c.slice(0,5); const z=((n>=88800&&n<=88999)||(n>=95500&&n<=95599))?0:FRETE.zonaUF[uf];
     const p=PECAS.find(x=>x.id===sel.value); const kg=sel.value==="__mais"?2:pesoPeca(p);
     const nomePeca=p?p.nome:"duas ou mais peças";
     const pac=precoFrete(FRETE.PAC,z,kg), sx=precoFrete(FRETE.SEDEX,z,kg), s10=sx+FRETE.sedex10Extra;
